@@ -97,7 +97,7 @@ else
     end
 end
 
-[ x_werte ] = scale_x_axis( n_pics );
+[ x_werte ] = scale_x_axis( n_pics ); % Use this function if the recording had phases with different acquisition frequencies (e.g. low frequency to save data during equilibration phase)
 
 if show_specified_traces==1;
     %Plot single trace
@@ -223,7 +223,7 @@ for measurement=start_measurement:n_measurements
     
     
     % Calculate relative vesicle pool sizes
-    rrpoolanteil=(rrpstim-baseline)./(rrpstim-baseline+recstim-vorrecstim+totalstim-vortotalstim); %die Anteile werden für jede ROI berechnet
+    rrpoolanteil=(rrpstim-baseline)./(rrpstim-baseline+recstim-vorrecstim+totalstim-vortotalstim); %die Anteile werden fÃ¼r jede ROI berechnet
     recpoolanteil=(recstim-vorrecstim+rrpstim-baseline)./(rrpstim-baseline+recstim-vorrecstim+totalstim-vortotalstim);
     
     
